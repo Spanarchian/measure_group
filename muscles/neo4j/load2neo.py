@@ -1,7 +1,10 @@
 # from gdb import get_gdb as session
 
 from neo4j import GraphDatabase, basic_auth
-driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "changeme"))
+# driver = GraphDatabase.driver("bolt://localhost:7687", auth=basic_auth("neo4j", "changeme"))
+driver = GraphDatabase.driver(
+    "bolt://54.236.224.67:32859", 
+    auth=basic_auth("neo4j", "board-ports-specification"))
 session = driver.session()
 
 
